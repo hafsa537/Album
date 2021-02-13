@@ -15,37 +15,37 @@ public class UserResource {
     private UserService userService;
 
 
-        @GetMapping("/user")
+        @GetMapping("/album")
 
         public User getUser() {
         return userService.getUser();
     }
 
-        @PostMapping("/user")
+        @PostMapping("/album")
         public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
-        @GetMapping("/allUsers")
-        public List<User> getAllUsers()
+        @GetMapping("/allAlbums")
+        public List<User> getAllAlbums()
         {
-            return userService.getAllUsers();
+            return userService.getAllAlbums();
         }
-        @GetMapping("/user/{albumId}")
-        public User getUserbyId(@PathVariable("albumId") int albumId)
+        @GetMapping("/album/{albumId}")
+        public User getAlbumbyId(@PathVariable("albumId") int albumId)
         {
             return userService.getAlbumbyId(albumId);
         }
 
-        @PutMapping("/user/{albumId}")
-        public User updateUser(@PathVariable("albumId") int albumId, @RequestBody User user)
+        @PutMapping("/album/{albumId}")
+        public User updateAlbum(@PathVariable("albumId") int albumId, @RequestBody User user)
         {
-            return userService.updateUser(albumId, user);
+            return userService.updateAlbum(albumId, user);
         }
 
-        @DeleteMapping("/user")
-        public User deleteUser(@RequestParam(name = "albumId") int albumId)
+        @DeleteMapping("/album")
+        public User deletedalbum(@RequestParam(name = "albumId") int albumId)
         {
-            return userService.deleteUser(albumId);
+            return userService.deletedalbum(albumId);
         }
 
     }

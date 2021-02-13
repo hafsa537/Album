@@ -45,7 +45,7 @@ public class User {
         this.coverPicUrl = coverPicUrl;
     }
 
-    public int getUserId() {
-        return albumId;
-    }
+    //public int getAlbumId() {
+      //  return albumId;
+    //}
 }

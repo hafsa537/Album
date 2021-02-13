@@ -12,7 +12,7 @@ public class UserRepository {
     List<User> albumList=new ArrayList();
     public User getUser() {
 
-        User user = new User(101 , "WeddingPics", "About best moments", "C:\\Users\\syeda hafsa fatima\\Desktop\\MY phone backuup\\DCIM\\AR Emoji camera\\A1.jpg");
+        User user = new User(1 , "WeddingPics", "About best moments", "C:\\Users\\syeda hafsa fatima\\Desktop\\MY phone backuup\\DCIM\\AR Emoji camera\\A1.jpg");
         return user;
     }
 
@@ -22,14 +22,14 @@ public class UserRepository {
         return user;
     }
 
-    public List<User> getAllUsers() {
+    public List<User> getAllAlbums() {
         return albumList;
     }
 
     public User getAlbumbyId(int albumId) {
         for(User user:albumList)
         {
-            if(user.getUserId() == albumId){
+            if(user.getAlbumId() == albumId){
 
                 return user;
             }
@@ -41,7 +41,7 @@ public class UserRepository {
     public User updateAlbum(int albumId, User user) {
         for(User u:albumList)
         {
-            if(u.getUserId() == albumId)
+            if(u.getAlbumId() == albumId)
             {
                 u.setName(user.getName());
                 //u.setAddress(user.getAddress());
@@ -59,7 +59,7 @@ public class UserRepository {
         User deletedalbum=null;
         for(User u:albumList)
         {
-            if(u.getUserId() == albumId)
+            if(u.getAlbumId() == albumId)
             {
                 deletedalbum = u;
                 albumList.remove(u);
